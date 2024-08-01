@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexCards & Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgb(56, 113, 139);
+        }
+
+        img {
+
+            left: 0px;
+            margin-top: 20px;
+            bottom: 10px;
+            height: 50px;
+
+        }
+
+        /*********************Logo*************************/
+
+        .logo {
+            content: '';
+            color: #eff2f3;
+            width: 100%;
+            margin-top: 100px;
+            margin: 20px;
+
+        }
+
+
+        .logo {
+            align-items: center;
+            font-size: 40px;
+            font-weight: bold;
+            margin: 0px;
+            top: 20px;
+            margin-top: 100px;
+            padding-bottom: 60px;
+            padding-left: 53px;
+            padding-top: 50px;
+            transition: 0.5s ease;
+        }
+
+        .logo:hover {
+            cursor: pointer;
+            text-shadow: 0 0 5px white,
+                0 0 20px white,
+                0 0 60px white,
+                0 0 150px white;
+        }
+
+        .logo i {
+            display: inline-block;
+
+        }
+
+        /*******************Navbar **************************/
+
+        nav {
+            display: flex;
+        }
+
+        nav ul {
+            display: flex;
+            margin-right: 0px;
+            margin-left: 30px;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin-right: 5px;
+        }
+
+        .navbar {
+            font-weight: bold;
+            color: azure;
+            background-color: rgb(7, 8, 8);
+            width: 100%;
+            margin: 2px;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 43px;
+            margin-top: 3px;
+        }
+
+        nav ul li a {
+            margin-top: 5px;
+            list-style-type: none;
+            display: inline-block;
+            padding: 0px 0px;
+            transition: 0.8s ease;
+
+        }
+
+        nav ul li a:hover {
+            cursor: pointer;
+            text-shadow: 0 0 10px white,
+                0 0 30px white,
+                0 0 70px white,
+                0 0 220px white;
+        }
+
+
+        nav ul li a {
+            margin-right: 20px;
+            margin-left: 2px;
+            padding-left: 5px;
+            text-decoration: none;
+            position: relative;
+            color: azure;
+            padding: 0px;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            background-color: azure;
+            height: 2px;
+            width: 0;
+            left: 0px;
+            bottom: -4px;
+            transition: 0.3s;
+
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .navbar a {
+            font-size: 19px;
+            color: azure;
+
+        }
+
+        /**********************Searchbar*************************/
+
+        .Searchbar {
+            margin-right: 60px;
+            width: max-content;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            padding: -1px;
+            border: none;
+            outline: none;
+            border-radius: 30px;
+            background-color: azure;
+        }
+
+        .Searchbar input {
+            margin-left: 10px;
+            outline: none;
+            border: none;
+
+        }
+
+        button {
+            border: none;
+            outline: none;
+            padding-right: 8px;
+        }
+
+        /************************FlexBoxCSS****************************/
+        .containers {
+            margin-top: 100px;
+            display: inline-flex;
+        }
+
+        .cards {
+            display: flex;
+        }
+
+        .card {
+            width: 250px;
+            margin: 18px;
+            margin-left: 17px;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        .card img {
+            max-width: 100%;
+        }
+
+        .card .text {
+            padding: 0 20px 20px;
+        }
+
+
+        /************************Cards Hover*****************************/
+
+        .containers .card {
+
+            padding: 0px 0px;
+            transition: 0.8s ease;
+
+        }
+
+        .containers .card:hover {
+            cursor: pointer;
+            box-shadow: 0 0 10px white,
+                0 0 30px white,
+                0 0 70px white,
+                0 0 220px white;
+        }
+
+        #img {
+            width: 150px;
+            height: 150px;
+            background-image: cover;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #ccc;
+            margin: 25px auto 20px auto;
+            padding-top: -1px;
+            display: block;
+        }
+
+        /********************Button**************************/
+        button {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            color: white;
+            background: rgb(3, 206, 88);
+            border: 0;
+            border-radius: 60px;
+            padding: 7px;
+            width: 50%;
+            height: 30px;
+            margin-left: 50px;
+            margin-right: 4px;
+            margin-bottom: 0px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="pic"><span class="logo">Dev<i class="fa-brands fa-viadeo"></i>ps</span></a>
+        <div class="container">
+
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Team</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <form class="Searchbar">
+
+                <input type="text" placeholder="Search.." name="search"><button type="submit"><i
+                        class="fa fa-search"></i></button>
+
+            </form>
+        </nav>
+    </div>
+
+
+    <!--=========================FlexBox=========================-->
+
+
+    <div class="containers">
+        <article class="card">
+            <img id="img" src="https://cdn-icons-png.flaticon.com/512/3237/3237472.png" alt="Sample photo">
+            <div class="text">
+                <h3>Devops Engineer</h3><br>
+                <p>DevOps engineers manage an application's infrastructure. They also apply engineering principles..
+                </p><br>
+                <button class="btn" type="button">Contact</button>
+            </div>
+        </article>
+        <article class="card">
+            <img id="img" src="https://cdn-icons-png.flaticon.com/512/3237/3237472.png" alt="Sample photo">
+            <div class="text">
+                <h3>Software Engineer</h3><br>
+                <p>Software engineering is an engineering approach to software development. A practitioner..,</p><br>
+                <button class="btn" type="button">Contact</button>
+            </div>
+        </article>
+        <article class="card">
+            <img id="img" src="https://cdn-icons-png.flaticon.com/512/3237/3237472.png" alt="Sample photo">
+            <div class="text">
+                <h3>Security Engineer</h3><br>
+                <p>Security engineers monitor network traffic, system logs, and security alerts to detect...</p><br><br>
+                <button class="btn" type="button">Contact</button>
+            </div>
+        </article>
+        <article class="card">
+            <img id="img" src="https://cdn-icons-png.flaticon.com/512/3237/3237472.png" alt="Sample photo">
+            <div class="text">
+                <h3>Network Engineer</h3><br>
+                <p>Network engineer is a computer networks that support in-house voice, data,video and wireless network
+                    services.</p><br>
+                <button class="btn" type="button">Contact</button>
+            </div>
+        </article>
+        <article class="card">
+            <img id="img" src="https://cdn-icons-png.flaticon.com/512/3237/3237472.png" alt=" photo">
+            <div class="text">
+                <h3>Database Engineer</h3><br>
+                <p>Database Engineer,query processes, and security. Model, design, and relational databases.,.</p><br>
+                <button class="btn" type="button">Contact</button>
+            </div>
+    </div>
+    </article>
+    </div>
+</body>
+
+</html>
